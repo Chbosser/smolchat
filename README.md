@@ -21,7 +21,6 @@ It is intentionally small because the assignment uses free-tier style CPU EC2 in
 
 ### Login / Landing Page
 
-![Login Page]
 
 <img width="1096" height="783" alt="Screenshot 2026-05-01 163842" src="https://github.com/user-attachments/assets/61d0d32e-4e7e-4093-b0b8-16f672398b34" />
 
@@ -30,7 +29,7 @@ It is intentionally small because the assignment uses free-tier style CPU EC2 in
 
 ### Chat Page
 
-![Chat Page]
+
 <img width="1100" height="785" alt="Screenshot 2026-05-01 163901" src="https://github.com/user-attachments/assets/3f86da45-17f5-4d48-8887-5eab34dfb025" />
 <img width="1709" height="873" alt="Screenshot 2026-05-03 235055" src="https://github.com/user-attachments/assets/aebdb4e5-8780-4241-b5b5-cc46ae3ec659" />
 
