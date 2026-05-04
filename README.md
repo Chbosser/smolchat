@@ -292,3 +292,9 @@ Some things I would add if I had more time:
 - better mobile layout
 - longer model responses
 - cleaner chat history controls
+
+## Demo Video
+
+https://github.com/user-attachments/assets/dcc471fb-e31e-4aa7-8142-78a35205811e
+
+
