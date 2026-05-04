@@ -1,13 +1,7 @@
-<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1.75" y="20.5" width="21.5" height="4" rx="1.5" stroke="#007ACC"/>
-<rect x="0.5" y="0.5" width="24" height="17.75" rx="2.5" stroke="#007ACC"/>
-<rect x="3" y="3" width="19" height="12.75" rx="2.5" stroke="#007ACC"/>
-<rect x="6.75" y="18.2083" width="11.5" height="2.125" rx="1.0625" stroke="#007ACC"/>
-<ellipse cx="8.75" cy="9.37501" rx="1.25" ry="1.875" fill="#007ACC"/>
-<ellipse cx="16.25" cy="9.37501" rx="1.25" ry="1.875" fill="#007ACC"/>
-</svg>
-# <img width="25" height="25" alt="logo-icon" src="https://github.com/user-attachments/assets/8ebef8df-ace2-4d4c-97b8-19853f112acd" />
-smolChat
+<h1 align="left">
+  <img src="static/icons/logo-icon.svg" width="32" alt="smolChat logo">
+  smolChat
+</h1>
 
 smolChat is a small AWS-hosted LLM chat app I built for my Cloud Computing assignment. The main idea was to deploy a basic chat service using two separate EC2 instances: one public-facing web/app server and one private model server running vLLM.
 
