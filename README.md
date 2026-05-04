@@ -17,6 +17,10 @@ It is intentionally small because the assignment uses free-tier style CPU EC2 in
 
 ---
 
+## Logo
+<img width="767" height="339" alt="image" src="https://github.com/user-attachments/assets/1ba3fdd5-8bfc-4ce6-81dc-0c20bd31e32b" />
+
+
 ## Screenshots
 
 ### Login / Landing Page
