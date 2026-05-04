@@ -1,5 +1,5 @@
 <h1 align="left">
-  <img src="static/icons/logo-icon.svg" width="32" alt="smolChat logo">
+  <img src="static/icons/logo-icon.svg" width="40" alt="smolChat logo">
   smolChat
 </h1>
 
