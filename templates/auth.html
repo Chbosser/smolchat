@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>smolchat</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-logo">
+        <div class="logo">
+            <img src="/static/icons/logo-icon.svg" alt="smolchat logo">
+            <span>smolchat</span>
+
+            <span class="tooltip">
+                <img class="logo-info-icon" src="/static/icons/info-icon.svg" alt="info">
+                <span class="tooltip-text">A smol project by Christian Farias</span>
+            </span>
+        </div>
+
+        <div class="top-icons">
+            <button class="icon-btn" type="button" onclick="toggleThemeMenu()" aria-label="theme menu">
+                <img src="/static/icons/paint-icon.svg" alt="themes">
+            </button>
+            <img src="/static/icons/git-icon.svg" alt="git">
+            <span>v1.0.0</span>
+        </div>
+    </div>
+
+    <div id="theme-menu" class="theme-menu">
+        <p>themes coming soon</p>
+    </div>
+
+    <main class="auth-main">
+        <div class="auth-wrapper">
+            <section class="auth-box">
+                <h3><img src="/static/icons/register-icon.svg" alt=""> register</h3>
+                <form method="post" action="/register">
+                    <input name="email" type="email" placeholder="email" required oninput="checkForms()">
+                    <input name="password" type="password" placeholder="password" required oninput="checkForms()">
+                    <input name="verify_password" type="password" placeholder="verify password" required oninput="checkForms()">
+                    <button type="submit">
+                        <img src="/static/icons/register-icon.svg" alt=""> sign up
+                    </button>
+                </form>
+            </section>
+
+            <section class="auth-box">
+                <h3><img src="/static/icons/login-icon.svg" alt=""> login</h3>
+                <form method="post" action="/login">
+                    <input name="email" type="email" placeholder="email" required oninput="checkForms()">
+                    <input name="password" type="password" placeholder="password" required oninput="checkForms()">
+                    <button type="submit">
+                        <img src="/static/icons/login-icon.svg" alt=""> sign in
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <script>
+        function checkForms() {
+            document.querySelectorAll("form").forEach(form => {
+                const button = form.querySelector("button");
+                const inputs = form.querySelectorAll("input");
+                const filled = Array.from(inputs).every(input => input.value.trim() !== "");
+                button.classList.toggle("active", filled);
+            });
+        }
+
+        function toggleThemeMenu() {
+            document.getElementById("theme-menu").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

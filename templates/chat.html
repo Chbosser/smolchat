@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>smolchat</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-layout">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/static/icons/logo-icon.svg" alt="smolchat logo">
+                <span>smolchat</span>
+            </div>
+
+            <div class="user-footer">
+                <img src="/static/icons/account-icon.svg" alt="account">
+                <div>
+                    <p>{{ user_email }}</p>
+                    <a href="/logout">logout?</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-main">
+            <div class="chat-header">
+                <span>SmolLM</span>
+                <span class="tooltip">
+                    <img class="logo-info-icon" src="/static/icons/info-icon.svg" alt="info">
+                    <span class="tooltip-text">SmolLM is the small language model running privately on your model EC2 instance through vLLM.</span>
+                </span>
+
+                <div class="top-icons">
+                    <button class="icon-btn" type="button" onclick="toggleThemeMenu()" aria-label="theme menu">
+                        <img src="/static/icons/paint-icon.svg" alt="themes">
+                    </button>
+                    <img src="/static/icons/git-icon.svg" alt="git">
+                    <span>v1.0.0</span>
+                </div>
+            </div>
+
+            <div id="theme-menu" class="theme-menu">
+                <p>themes coming soon</p>
+            </div>
+
+            <section class="chat-content">
+                {% if messages %}
+                    <div class="chat-box">
+                        {% for msg in messages %}
+                            <div class="chat-message-row {{ msg.role }}">
+                                <div class="chat-bubble">
+                                    <strong>
+                                        {% if msg.role == "assistant" %}
+                                            smolChat
+                                        {% else %}
+                                            {{ msg.role }}
+                                        {% endif %}
+                                    </strong>
+                                    {{ msg.content }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="empty-chat">
+                        <h2>Welcome to <span>smolChat</span>!</h2>
+                        <p>engage in small talk</p>
+                    </div>
+                {% endif %}
+            </section>
+
+            <form method="post" action="/chat" class="chat-form">
+                <input name="prompt" placeholder="keep it brief" required autocomplete="off">
+                <button type="submit">↑</button>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        function toggleThemeMenu() {
+            document.getElementById("theme-menu").classList.toggle("show");
+        }
+
+        const chatContent = document.querySelector(".chat-content");
+        if (chatContent) {
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+    </script>
+</body>
+</html>

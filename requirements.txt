@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+itsdangerous
+openai
+passlib[argon2]
+argon2-cffi
