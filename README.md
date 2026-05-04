@@ -294,6 +294,7 @@ Some things I would add if I had more time:
 - cleaner chat history controls
 
 ## Demo Video
+Here is a short video that showcases the account creation,log-in, and chatting in SmolChat(feat. Halo 2 Trapped in Amber):
 
 https://github.com/user-attachments/assets/dcc471fb-e31e-4aa7-8142-78a35205811e
 
